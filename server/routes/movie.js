@@ -54,7 +54,7 @@ router.route("/delete/:imdbID").delete(function(req,res)
           res.send(err);
         }
         else  {
-        res.send("movies deleted");
+        res.send("movie deleted");
         }
       });
     }
@@ -66,7 +66,7 @@ console.log("updating movie");
 console.log(req.body);
     if(req.body)
     {
-      
+
       movie.update({imdbID:req.body.imdbID}, {$set: {Title:req.body.Title}},function(err){
         if(err) {
           console.log(err);
